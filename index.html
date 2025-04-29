@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> P.S.R Mecánica  </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style >
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #3498db, #2ecc71);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo svg {
+            width: 50px;
+            height: 50px;
+        }
+        .logo h2 {
+            font-size: 1.5rem;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            animation: fadeInDown 1.5s;
+            margin-top: 100px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeInUp 1.5s;
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .servicios {
+            padding: 2rem;
+            ;
+            text-align: center;
+        }
+        
+        .servicios h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .servicio {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .servicio:hover {
+            transform: translateY(-5px);
+        }
+        
+        .servicio img {
+            width: 90px;
+            height: 70px;
+            margin-bottom: 1rem;
+        }
+        
+        .servicio h3 {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+                form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        form button:hover {
+            background-color: #2ecc71;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .whatsapp-button img {
+            width: 60px;
+            height: 60px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .logo h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- <div class="logo">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+
+                <path d="M22.7 19.7L16 13l1-5-5-1-6.7 6.7c-1 1-1 2.6 0 3.5l6.5 6.5c.9 1 2.5 1 3.5 0L22.7 19.7z"/>
+
+            </svg>
+
+            <h2> D' Solano Mecánica </h2>
+
+        </div> -->
+
+        <!-- <div class="logo">
+            <img src="tu-imagen.png" alt="Logo" style="width: 60px; height: 60px;">
+            <h2>Mecánica Express</h2>
+        </div>
+        -->
+
+<!-- 
+        .servicios ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .servicios li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .servicios li:hover {
+            transform: translateY(-5px);
+        } -->
+
+        <div class="logo">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdP13j0W-rgxFGX-4NIGIUXsjW2CIW9JIIOQ&s" alt="Kia K5" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;">
+
+            <h2> D' Solano Mecánica  </h2>
+            
+        </div>
+        
+        </div>
+        
+
+        <h1> Tu Mecánico a Domicilio </h1>
+
+        <p> ¡Servicio rápido, seguro y donde tú lo necesites! </p>
+
+    </header>
+
+    <!-- <section class="sobre-nosotros">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos un equipo de mecánicos profesionales listos para asistirte en cualquier lugar. Brindamos soluciones inmediatas para tu auto sin que tengas que moverte de casa o trabajo.</p>
+    </section> -->
+
+    <section id="about">
+        <h2> ¿Quién soy? </h2>
+        <br>
+        <p>
+            ¡Hola! Soy un técnico automotriz apasionado por los autos y con años de experiencia ofreciendo servicios de mecánica a domicilio. 
+            Mi objetivo es brindarte soluciones rápidas, honestas y de calidad, directamente en la comodidad de tu hogar o donde lo necesites. 
+            Trabajo de manera independiente, comprometido en cada servicio para que tu vehículo esté siempre en las mejores condiciones.
+        </p>
+
+        
+        <br>
+
+        <p>
+            <strong> "Más que un servicio, busco ser tu mecánico de confianza". </strong>
+        </p>
+
+        <section class="servicios">
+
+            <h2> Servicios De: </h2>
+
+            <d class="servicios-grid">
+
+                <div class="servicio">
+                    <img src="https://media.istockphoto.com/id/2160435737/es/foto/comprobaci%C3%B3n-de-la-presi%C3%B3n-del-aire-acondicionado-de-un-veh%C3%ADculo-con-la-herramienta-de-medici%C3%B3n.webp?a=1&b=1&s=612x612&w=0&k=20&c=wLc3_hRReflMI2wgIXpaXJgC4ZjssSNPY8aezkUxjAk=" alt="Aire acondicionado">
+
+                    <h3> Reparación de aire acondicionado </h3>
+                </div>
+        
+                <div class="servicio">
+                    <img src="https://media.istockphoto.com/id/2183709100/es/foto/colecci%C3%B3n-de-suministros-automotrices-con-jarras-de-aceite-filtro-de-aire-y-embudo-en-blanco.webp?a=1&b=1&s=612x612&w=0&k=20&c=0XpsDawvXDBR4VazJUfU7vFGMjFxcsIGUwxriKtcZL4=" alt="Cambio de aceite">
+
+                    <h3> Cambio de aceite y filtros </h3>
+                </div>
+        
+                <div class="servicio">
+                    <img src="https://media.istockphoto.com/id/1596813342/es/foto/un-mec%C3%A1nico-de-autom%C3%B3viles-instala-una-bater%C3%ADa-en-un-autom%C3%B3vil-reemplazo-y-reparaci%C3%B3n-de.webp?a=1&b=1&s=612x612&w=0&k=20&c=qIwCextmTmXgelK4vProb8_1X4ISKkQdrKRXzv4RROk=" alt="Instalación de baterías">
+
+                    <h3> Instalación de baterías </h3>
+
+                </div>
+        
+                <div class="servicio">
+
+                    <img src="https://www.ntn-snr.com/sites/default/files/styles/mp_medium/public/2016-11/roulements-automobiles-3-N.jpg?itok=bUEtAWrF" alt="Cambio de rodamientos">
+
+                    <img src="https://media.istockphoto.com/id/515886936/es/foto/velocidad-constante-articulaciones.webp?a=1&b=1&s=612x612&w=0&k=20&c=TGcn5cWsidHvlRVNGQ00euPjOCE23nX2Oh8x8B5L2Wg=" alt=" Punta de Eje">
+
+                    <h3> Cambio de rodamientos </h3>
+                </div>
+        
+                <div class="servicio">
+
+                    <img src="https://i.ytimg.com/vi/mK1C1EL23o0/maxresdefault.jpg" alt="Cambio de bujías">
+
+                    <h3> Cambio de bujías </h3>
+                </div>
+        
+                <div class="servicio">
+
+                    <img src="https://www.autoavance.co/wp-content/uploads/2022/01/limpiar-cuerpo-aceleracion.png" alt="Limpieza de trote">
+
+                    <h3> Limpieza de cuerpo de aceleración (Trote) </h3>
+                </div>
+        
+                <div class="servicio">
+
+                    <img src="https://media.istockphoto.com/id/1290457993/es/foto/reemplazo-de-la-almohadilla-de-freno-en-el-servicio-del-coche.webp?a=1&b=1&s=612x612&w=0&k=20&c=_IkrMLq7aD5QRU2G9OMexAIYO4DuPuxkaUnCgMg-DME=" alt="Reparación de frenos">
+
+                    <img src="https://www.tallerescastroygomez.es/cada-cuanto-tiempo-debemos-revisar-los-frenos-de-un-coche_img85701t1.jpg" alt="Bandas de Frenos">
+
+                    <h3> Reparación de frenos </h3>
+                </div>
+        
+                <div class="servicio">
+
+                    <img src="https://i.ytimg.com/vi/qeDzbxekudo/maxresdefault.jpg" alt="Sellado de juntas">
+
+                    <img src="https://m.media-amazon.com/images/I/71cHJTDt-RL._AC_UF894,1000_QL80_.jpg" alt=" Junta de tapa de cigüeñal">
+
+                    <h3> Sellado de juntas de tapas de válvulas </h3>
+                </div>
+        
+                <div class="servicio">
+
+                    <img src="https://itecnosa.cl/wp-content/uploads/2023/06/cremallera-de-direccion-hidraulica_itecno2.jpg" alt="Cambio de cremalleras">
+
+                    <h3> Cambio de cremalleras </h3>
+                </div>
+        
+                <div class="servicio">
+                    <img src="https://media.istockphoto.com/id/1304671328/photo/new-car-water-pump-with-gasket-and-timing-belt-on-gray-table-automobile-spare-part.jpg?s=612x612&w=0&k=20&c=vZ9Ckw7kEShwdBluU07pjeyafbtEa8Bk_B_VhxUceMo=" alt="Cambio de bomba de agua">
+
+                    <img src="https://doctorcoche.es/wp-content/uploads/2023/02/cambiar-bomba-de-agua-del-coche.jpg" alt="">
+                    <h3> Cambio de bomba de agua </h3>
+                </div>
+
+                <div class="servicio">
+                    <img src="https://media.istockphoto.com/id/1410853146/photo/a-power-steering-pump-is-in-the-hands-of-an-auto-mechanic-close-up.jpg?s=612x612&w=0&k=20&c=G7OOtKdci7VGFKaBboGXs3e-lVV9o3rgwNO8s6-8Kk8=" alt="Cambio de bomba hidraulica">
+
+                    <h3> Cambio de bomba hidráulica </h3>
+                </div>
+
+                <div class="servicio">
+                    <img src="https://m.media-amazon.com/images/I/81SjpX120NL.jpg" alt=" Soporte del m">
+
+                    <h3> Reemplazo de soportes de motor y transmisión </h3>
+                </div>
+
+                
+                <div class="servicio">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_660647-MLV50743203076_072022-O.webp" alt="Cambio de Mono-Correa">
+                    
+                    <h3> Cambio de Mono-Correa </h3>
+                </div>
+
+
+                <div class="servicio">
+                    <img src="https://m.media-amazon.com/images/I/51Q9-yWigcL._AC_UF350,350_QL80_.jpg" alt="Reemplazo de amortiguadores">
+                    
+                    <h3> Reemplazo de amortiguadores </h3>
+                </div>
+
+
+                <div class="servicio">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwZTphWWosIMyqEsk_GZGmpzBK3EaaiowZkw&s" alt="Sellado de tapa de Crank">
+                    
+                    <h3> Sellado de tapa de Crank </h3>
+
+                </div>
+
+
+                <div class="servicio">
+                    <img src="https://www.cadena88.com/sites/default/files/styles/ideas_y_proyectos_cabecera/public/content/nodes/consejos-y-trucos/image/232986/tipos-de-llaves.jpg" alt="Y más servicios...">
+                    
+                    <h3> Y más servicios... </h3>
+
+                </div>
+            
+            
+            </div>
+        </section>
+
+
+        <section class="contacto">
+
+            <h2> Contáctanos </h2>
+            
+            <form action="https://formspree.io/f/mdkgkjke" method="POST" id="contact-form" target="_blank">
+
+                <label for="nombre"> Nombre: </label>
+                <input type="text" id="nombre" name="nombre" required placeholder= "Tu nombre completo">
+                
+                <label for="email"> Correo electrónico: </label>
+                <input type="email" id="email" name="email" required placeholder= "Tu correo electrónico">
+                
+                <label for="mensaje"> Tu mensaje: </label>
+                <textarea id="mensaje" name="mensaje" rows="4" required placeholder= "Escribe tu mensaje aquí..."></textarea>
+                
+                <button type="submit"> Enviar Mensaje </button>
+                <p id="form-msg" style="display:none; color: green; margin-top: 10px;"> ¡Tu mensaje ha sido enviado correctamente! 🫡 </p>
+
+            </form>
+        </section>
+
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", async function(e) {
+                e.preventDefault(); // Evita que redirija a Formspree
+                const form = e.target;
+                const formData = new FormData(form);
+            
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+            
+                    if (response.ok) {
+                        document.getElementById("form-msg").style.display = "block";
+                        form.reset(); // Limpia el formulario
+                    } else {
+                        alert("Hubo un problema al enviar el mensaje. Intenta nuevamente.");
+                    }
+                } catch (error) {
+                    alert("Error al enviar el formulario.");
+                }
+            });
+            </script>
+        
+
+    <!-- <section class="contacto">
+        
+        <h2> Contáctanos </h2>
+
+        <form action="mailto:tuemail@mecanico.com" method="post" enctype="text/plain">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section> -->
+
+    <footer>
+        <p> © 2025 PSR Tu Mecánico a Domicilio. Todos los derechos reservados. </p>
+        <p> WhatsApp: 829-805-1985 | Correo: pedrosolanopsr@gmail.com </p>
+    </footer>
+
+    <a class="whatsapp-button" href="https://wa.me/18298051985?text=Hola,%20quiero%20información%20sobre%20el%20servicio%20de%20mecánica%20a%20domicilio" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
+</body>
+</html>
